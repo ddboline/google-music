@@ -75,8 +75,6 @@ class MusicManager(GoogleMusicClient):
 		if self.login():
 			if uploader_id is None:
 				mac_int = get_mac()
-				if (mac_int >> 40) % 2:
-					raise OSError("A valid MAC address could not be obtained.")
 
 				mac_string = create_mac_string(mac_int)
 
